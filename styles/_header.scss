@@ -1,0 +1,30 @@
+@mixin flexCenter($direction,$background){
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background;
+}
+
+/*
+以下均為註解
+!以下是上部分
+*以下是上區塊
+?以下是網頁上端
+TODO以下是上面的部分
+*/
+
+header{
+    @include flexCenter(column,pink);
+    
+    button{
+        background: $primaryBtn;
+        &:hover{
+            background: red;
+        }
+        &::after{
+            content: "hellooooooo";
+        }
+    }
+}
